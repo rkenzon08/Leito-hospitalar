@@ -1,0 +1,88 @@
+1 . Baixe e instale a Arduino IDE (versão 1.8.x ou 2.x):
+https://www.arduino.cc/en/software
+
+2. Instalar o suporte ao ESP8266
+Abra a Arduino IDE
+
+Vá em:
+Arquivo → Preferências
+
+No campo “URLs Adicionais para Gerenciadores de Placas”, adicione:
+http://arduino.esp8266.com/stable/package_esp8266com_index.json
+
+Clique em OK
+
+Agora vá em:
+Ferramentas → Placa → Gerenciador de Placas
+
+Pesquise por ESP8266
+
+Instale o pacote "esp8266 by ESP8266 Community"
+
+3. Selecionar a placa correta
+Vá em:
+Ferramentas → Placa → ESP8266 Boards
+
+Selecione: NodeMCU 1.0 (ESP-12E Module)
+
+4. Selecionar a porta USB correta
+Conecte o NodeMCU ao computador
+
+Abra:
+Ferramentas → Porta
+
+Selecione a porta COM que aparecer (ex: COM3, COM5 etc.)
+
+5. Instalar as bibliotecas necessárias
+O projeto utiliza as seguintes bibliotecas:
+
+ESP8266WiFi
+PubSubClient
+
+Para instalar, abra:
+Ferramentas → Gerenciar Bibliotecas
+
+Pesquise e instale:
+
+PubSubClient (por Nick O’Leary)
+
+ESP8266WiFi já vem com o pacote ESP8266
+
+6. Abrir o código
+Baixe o arquivo .ino que está no repositório em /codigo
+
+Abra o arquivo na Arduino IDE
+
+7. Configurar Wi-Fi e MQTT
+Antes de enviar, edite estas linhas no código:
+
+const char* ssid = "SUA_REDE_WIFI";
+const char* password = "SENHA_WIFI";
+
+const char* mqtt_server = "IP_DO_BROKER";
+const int mqtt_port = 1883;
+
+8. Compilar o código
+Clique no botão "Verificar" (compilar).
+
+Se aparecer “Compilado com sucesso”, continue.
+
+9. Enviar para o NodeMCU
+Clique no botão → Carregar (upload).
+
+Aguarde o processo terminar.
+
+Se a porta for correta e drivers estiverem funcionando, aparecerá:
+Upload completed successfully!
+
+10. Abrir o monitor serial
+Vá em Ferramentas → Monitor Serial
+
+Ajuste o baud rate para: 74880
+
+Você deve ver:
+
+Wi-Fi conectando
+IP obtido
+Publicações MQTT
+Distância medida
