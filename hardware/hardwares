@@ -1,0 +1,43 @@
+NodeMCU ESP8266 (ESP-12E)
+
+O projeto utiliza a placa de desenvolvimento NodeMCU ESP8266, baseada no microcontrolador ESP8266EX, que integra:
+
+Processador RISC de 32 bits (80–160 MHz)
+Memória Flash de 4 MB
+Interface Wi-Fi IEEE 802.11 b/g/n
+Tensão de operação: 3,3 V
+GPIOs digitais, PWM, ADC e comunicação serial
+
+A escolha do NodeMCU se deve ao baixo consumo, custo reduzido e facilidade de integração com sistemas IoT via Wi-Fi.
+
+
+Sensor Ultrassônico HC-SR04
+
+O sensor HC-SR04 é utilizado para detectar a presença ou ausência do paciente no leito, por meio da medição de distância entre o dispositivo e um ponto fixo.
+
+Especificações técnicas:
+
+Faixa de medição: 2 a 400 cm
+Precisão: ±3 mm
+Frequência ultrassônica: 40 kHz
+Tensão de operação: 5 V
+Consumo: ~15 mA
+Sinais:
+
+Trig (disparo)
+Echo (retorno do pulso)
+
+
+Módulos e Acessórios Eletrônicos
+
+Regulador de Tensão 5V → 3.3V (opcional)
+
+Utilizado quando o sensor ou outros módulos são alimentados por 5 V, garantindo que apenas 3,3 V cheguem ao NodeMCU.
+
+Protoboard e Jumpers
+
+Empregados para prototipagem inicial, facilitando conexões entre o NodeMCU, o sensor HC-SR04 e a fonte de energia.
+
+Fonte de Alimentação USB 5V
+
+Alimentação principal do NodeMCU, garantindo estabilidade ao sistema.
